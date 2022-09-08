@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppsFlyerLib
 
 class ViewController: UIViewController {
 
@@ -36,6 +37,11 @@ class ViewController: UIViewController {
         
         // The sender is the button that is tapped by the user.
         print(sender.titleLabel?.text ?? "💩");
+        
+        AppsFlyerLib.shared().logEvent(AFEventLevelAchieved,
+          withValues: [
+             AFEventParamLevel: sender.titleLabel?.text ?? "💩"
+        ]);
         
         
         

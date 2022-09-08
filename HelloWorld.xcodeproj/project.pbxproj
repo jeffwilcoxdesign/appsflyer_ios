@@ -13,6 +13,7 @@
 		1F59AE2F28C9C00700380C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F59AE2D28C9C00700380C59 /* Main.storyboard */; };
 		1F59AE3128C9C00900380C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F59AE3028C9C00900380C59 /* Assets.xcassets */; };
 		1F59AE3428C9C00900380C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F59AE3228C9C00900380C59 /* LaunchScreen.storyboard */; };
+		1F59AE3D28CA88FA00380C59 /* AppsFlyerLib in Frameworks */ = {isa = PBXBuildFile; productRef = 1F59AE3C28CA88FA00380C59 /* AppsFlyerLib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F59AE3D28CA88FA00380C59 /* AppsFlyerLib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = HelloWorld;
+			packageProductDependencies = (
+				1F59AE3C28CA88FA00380C59 /* AppsFlyerLib */,
+			);
 			productName = HelloWorld;
 			productReference = 1F59AE2428C9C00700380C59 /* HelloWorld.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = 1F59AE1B28C9C00700380C59;
+			packageReferences = (
+				1F59AE3B28CA88FA00380C59 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */,
+			);
 			productRefGroup = 1F59AE2528C9C00700380C59 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1F59AE3B28CA88FA00380C59 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppsFlyerSDK/AppsFlyerFramework";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1F59AE3C28CA88FA00380C59 /* AppsFlyerLib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1F59AE3B28CA88FA00380C59 /* XCRemoteSwiftPackageReference "AppsFlyerFramework" */;
+			productName = AppsFlyerLib;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1F59AE1C28C9C00700380C59 /* Project object */;
 }

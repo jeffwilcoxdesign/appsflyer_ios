@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AppsFlyerLib
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        AppsFlyerLib.shared().appsFlyerDevKey = "2bNjwEZJCRGqhBpfGAg7fW"
+        AppsFlyerLib.shared().appleAppID = "111119874"
+        
+        /* Uncomment the following line to see AppsFlyer debug logs */
+        AppsFlyerLib.shared().isDebug = true
         return true
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        // Start the SDK (start the IDFA timeout set above, for iOS 14 or later)
+        AppsFlyerLib.shared().start()
     }
 
     // MARK: UISceneSession Lifecycle
