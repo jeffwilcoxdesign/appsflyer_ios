@@ -20,7 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         /* Uncomment the following line to see AppsFlyer debug logs */
         AppsFlyerLib.shared().isDebug = true
+        
+        // SceneDelegate support
+        NotificationCenter.default.addObserver(self, selector: NSSelectorFromString("sendLaunch"), name: UIApplication.didBecomeActiveNotification, object: nil)
         return true
+    }
+    // SceneDelegate support - start AppsFlyer SDK
+    @objc func sendLaunch() {
+        AppsFlyerLib.shared().start()
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
